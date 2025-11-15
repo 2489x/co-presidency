@@ -1,46 +1,9 @@
-/* style.css */
-
-/* Body styling */
-body {
-  font-family: "Times New Roman", Times, serif;
-  margin: 40px 20px 40px 10px;
-  padding: 0;
-}
-
-/* Main title: Arial, uppercase, larger */
-h1 {
-  font-family: Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-/* Paragraphs: larger font */
-p {
-  font-size: 20px;
-}
-
-/* Headings underline */
-h2:not(.no-underline) {
-  text-decoration: underline;
-}
-
-/* Highlighted text */
-.highlight {
-  font-weight: bold;
-}
-
-/* Button container */
-.button-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-/* Rainbow button */
+/* Rainbow button with Courier New font */
 a.button {
   display: inline-block;
-  padding: 18px 41px;
-  font-size: 16px;
+  margin: 20px 0;               /* ensures space around button */
+  padding: 18px 45px;
+  font-size: 20px;
   font-family: "Courier New", monospace;
   font-weight: bold;
   text-decoration: none;
@@ -59,9 +22,22 @@ a.button {
   100% { background-position: 0% 50%; }
 }
 
-/* Flashing text color */
+/* Flashing button text effect (red/blue) */
 @keyframes flashText {
   0%, 50%, 100% { color: #fff; }
   25% { color: red; }
   75% { color: blue; }
+}
+
+/* Bold highlights */
+.highlight { font-weight: bold; }
+
+/* Underline for h2 except last heading */
+h2:not(.no-underline) { text-decoration: underline; }
+
+/* Button container spacing */
+.button-container {
+  display: block;    /* ensures button appears on its own line */
+  text-align: center; /* centers button */
+  margin-top: 30px;
 }
