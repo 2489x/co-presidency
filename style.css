@@ -1,0 +1,75 @@
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Body styling */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f0f0f0;
+  color: #111;
+  padding: 40px 0; /* top and bottom padding */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+}
+
+/* Container styling */
+.square-container {
+  background-color: #fff;
+  border: 3px solid #333;
+  box-shadow: 5px 5px 0 #999;
+  width: 90vw;
+  max-width: 900px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Text styling */
+h1, h2, p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+h1 { font-weight: bold; }
+h2 { font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+.highlight { font-weight: bold; }
+
+/* Button container */
+.button-container { margin-top: 30px; }
+
+/* Rainbow animated button */
+a.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 18px 45px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+  background-size: 400% 400%;
+  animation: rainbow 3s linear infinite;
+  transition: transform 0.2s;
+}
+
+a.button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
