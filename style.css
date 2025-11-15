@@ -1,58 +1,47 @@
-/* Reset browser defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
+/* style.css */
 
 /* Body styling */
 body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #f0f0f0;
-  color: #111;
-  padding: 40px 0; /* top and bottom padding */
-  display: flex;
-  justify-content: center; /* horizontal centering */
+  font-family: "Times New Roman", Times, serif;
+  margin: 40px 20px 40px 10px;
+  padding: 0;
 }
 
-/* Container styling */
-.square-container {
-  background-color: #fff;
-  border: 3px solid #333;
-  box-shadow: 5px 5px 0 #999;
-  width: 90vw;
-  max-width: 900px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border-radius: 10px;
+/* Main title: Arial, uppercase, larger */
+h1 {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-/* Text styling */
-h1, h2, p {
+/* Paragraphs: larger font */
+p {
   font-size: 20px;
-  margin: 15px 0;
 }
 
-h1 { font-weight: bold; }
-h2 { font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
-.highlight { font-weight: bold; }
+/* Headings underline */
+h2:not(.no-underline) {
+  text-decoration: underline;
+}
+
+/* Highlighted text */
+.highlight {
+  font-weight: bold;
+}
 
 /* Button container */
-.button-container { margin-top: 30px; }
+.button-container {
+  text-align: center;
+  margin: 30px 0;
+}
 
-/* Rainbow animated button */
+/* Rainbow button */
 a.button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 18px 45px;
-  font-size: 20px;
+  padding: 18px 41px;
+  font-size: 16px;
+  font-family: "Courier New", monospace;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
@@ -60,16 +49,19 @@ a.button {
   border-radius: 6px;
   background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
   background-size: 400% 400%;
-  animation: rainbow 3s linear infinite;
-  transition: transform 0.2s;
+  animation: rainbow 3s linear infinite, flashText 1.5s linear infinite;
 }
 
-a.button:hover {
-  transform: scale(1.05);
-}
-
+/* Rainbow gradient animation */
 @keyframes rainbow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Flashing text color */
+@keyframes flashText {
+  0%, 50%, 100% { color: #fff; }
+  25% { color: red; }
+  75% { color: blue; }
 }
